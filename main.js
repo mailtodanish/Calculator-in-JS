@@ -1,6 +1,7 @@
 $(document).ready(function(){
     
     $(".cell").click(function(){
+      debugger;
       let v = $(this).text();
       let input = $("#CalcInput").val();
       if (v == "C") {
@@ -9,13 +10,29 @@ $(document).ready(function(){
       else if (v != "=") {
       if (input != ""){
           previous_input = input[input.length -1];
-          if(!isNaN(previous_input))
+          if(v=="."){
+            // if decimal exist
+            decimal=false
+            Array.from(input).forEach(element => {
+                if (element == "."){
+                  decimal = true
+                }
+                if(isNaN(element) && element != "."){
+                  decimal = false
+                }
+              }); 
+          }
+          if(!isNaN(previous_input) && decimal==false)
           {            
                 input = `${input}${v}`;        
           }
-          if(isNaN(previous_input) && !isNaN(v))
+          if(isNaN(previous_input) && !isNaN(v) && decimal==false)
           {            
                 input = `${input}${v}`;        
+          }
+          if(decimal==true && v!=".")
+          {
+            input = `${input}${v}`; 
           }
 
       }else{
