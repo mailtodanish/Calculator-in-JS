@@ -1,7 +1,7 @@
 .calculator{
    margin-top: 10%; 
    margin-left: 40%;
-   width: 20%;   
+   width: 25%;   
    position: relative;
    background-size: 100%;
    border:1px solid black;
@@ -37,6 +37,7 @@
     width:100%;
     box-sizing: border-box;
     margin:auto;
+    table-layout: fixed;
 }
 
 .calculator td{
