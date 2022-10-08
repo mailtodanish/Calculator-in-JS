@@ -6,50 +6,39 @@
     <title>Calculator in JS</title>
     <link rel="stylesheet" href="main.css" class="css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="main.js"></script>
 </head>
 <body>
-    <a href="https://mailtodanish.github.io/analog-clock/">Clock</a>
-    <div class="calculator">
-  
-   <input id="CalcInput" type="text" class="cal">
-   <table>
-       <tr>
-           <td class="cell">7</td>
-           <td class="cell">8</td>
-           <td class="cell">9</td>
-           <td class="cell">/</td>
-       </tr>
-       <tr>
-        <td class="cell">4</td>
-        <td class="cell">5</td>
-        <td class="cell">6</td>
-        <td class="cell">x</td>
-    </tr>
-    <tr>
-        <td class="cell">1</td>
-        <td class="cell">2</td>
-        <td class="cell">3</td>
-        <td class="cell">+</td>
-    </tr>
-    <tr>
-        <td class="cell">0</td>
-        <td class="cell">00</td>
-        <td class="cell">.</td>
-        <td class="cell">-</td>
-    </tr>
-    <tr>
-        <td class="cell" colspan="3">=</td>
-        <td class="cell">C</td>
-    </tr>
-   </table>
-</div>
-<div class="msg">
-    Written in Pure Java Script<br>
-    <a href="https://github.com/mailtodanish?tab=repositories">git</a>
-</div>
-<img class="big-circle" src="./img/big-eclipse.svg" alt="" />
-<img class="medium-circle" src="./img/mid-eclipse.svg" alt="" />
-<img class="small-circle" src="./img/small-eclipse.svg" alt="" />
+    <button class="links"><a href="https://mailtodanish.github.io/analog-clock/">Clock</a></button>
+    <button class="links"><a href="https://github.com/mailtodanish?tab=repositories">git</a></button>
+     <div class="container">
+        <div class="claulator">
+            <input type="text" placeholder="0" id="inputscreen">
+              <button onclick="pressAllClear()">Cl</button>
+              <button onclick="del()">DL</button>
+              <button onclick="display('%')">%</button>
+              <button onclick="display('/')">/</button>
+              <button onclick="display('7')">7</button>
+              <button onclick="display('8')">8</button>
+              <button onclick="display('9')">9</button>
+              <button onclick="display('*')">*</button>
+              <button onclick="display('4')">4</button>
+              <button onclick="display('5')">5</button>
+              <button onclick="display('6')">6</button>
+              <button onclick="display('-')">-</button>
+              <button onclick="display('1')">1</button>
+              <button onclick="display('2')">2</button>
+              <button onclick="display('3')">3</button>
+              <button onclick="display('+')">+</button>
+              <button onclick="display('+/-')">+/-</button>
+              <button onclick="display('0')">0</button>
+              <!-- <button onclick="display('.')">.</button> -->
+              <button onclick="calculate()" class="equal">=</button>
+            </div>
+            <h3 class="heading">Written in Pure Java Script</h3>
+        </div>
+        <img class="big-circle" src="./img/big-eclipse.svg" alt="" />
+       <img class="medium-circle" src="./img/mid-eclipse.svg" alt="" />
+        <img class="small-circle" src="./img/small-eclipse.svg" alt="" />
+        <script src="main.js"></script>
 </body>
 </html>
